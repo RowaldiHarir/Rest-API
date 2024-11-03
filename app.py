@@ -1,17 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
 from datetime import datetime
 
 app = Flask(__name__)
 api = Api(app)
 
-# Define a simple GET endpoint
-# @app.route('/hello', methods=['GET'])
-# def hello():
-#     return jsonify({"message": "Hello, World!"})
-
-# # For Vercel to recognize the app
-#  from api.index import app as application
 # Data awal film
 movies = {
     "1": {
