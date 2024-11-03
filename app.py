@@ -6,13 +6,13 @@ app = Flask(__name__)
 api = Api(app)
 
 # Define a simple GET endpoint
-@app.route('/hello', methods=['GET'])
-def hello():
-    return jsonify({"message": "Hello, World!"})
+# @app.route('/hello', methods=['GET'])
+# def hello():
+#     return jsonify({"message": "Hello, World!"})
 
-# For Vercel to recognize the app
-from api.index import app as application
-Data awal film
+# # For Vercel to recognize the app
+#  from api.index import app as application
+# Data awal film
 movies = {
     "1": {
         "title": "Inception",
