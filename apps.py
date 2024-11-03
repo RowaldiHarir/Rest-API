@@ -29,7 +29,7 @@ movies = {
         "createdAt": "2024-01-02T00:00:00.000Z",
         "updatedAt": "2024-01-02T00:00:00.000Z"
     }
-   
+    # Tambahkan data film lainnya sesuai kebutuhan
 }
 
 class MovieList(Resource):
@@ -47,8 +47,12 @@ class Movie(Resource):
     def post(self, movie_id):
         if movie_id in movies:
             return jsonify({"message": "Movie with this ID already exists"}), 400
-
+        
         data = request.get_json()
+        # Validasi input
+        if not data or not all(k in data for k in ("title", "genre", "year", "director", "cast", "synopsis", "rating")):
+            return jsonify({"message": "Invalid input, all fields are required"}), 400
+
         new_movie = {
             "title": data["title"],
             "genre": data["genre"],
