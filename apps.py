@@ -1,3 +1,8 @@
+
+
+
+
+
 from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
 from datetime import datetime
@@ -28,19 +33,7 @@ movies = {
         "rating": 9.0,
         "createdAt": "2024-01-02T00:00:00.000Z",
         "updatedAt": "2024-01-02T00:00:00.000Z"
-    } 
-    "3":{
-    "_id": "507f191e810c19729de860eb",
-    "title": "The Matrix",
-    "genre": "Action",
-    "year": 1999,
-    "director": "Lana Wachowski",
-    "cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
-    "synopsis": "A hacker discovers the world is a simulation and joins a rebellion against its controllers.",
-    "rating": 8.7,
-    "createdAt": "2024-01-02T00:00:00.000Z",
-    "updatedAt": "2024-01-02T00:00:00.000Z"
-  },
+    },
   "3":{
     "_id": "507f191e810c19729de860ec",
     "title": "Interstellar",
